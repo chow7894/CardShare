@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					CB4FCBD019D8949A00864008 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = V55NHX495M;
 					};
 					CB4FCBE519D8949A00864008 = {
 						CreatedOnToolsVersion = 6.0;
@@ -375,6 +376,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CardShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardShare/CardShare-Bridging-Header.h";
@@ -389,6 +391,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CardShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardShare/CardShare-Bridging-Header.h";

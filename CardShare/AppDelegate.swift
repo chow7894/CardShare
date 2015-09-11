@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MultipeerConnectivity
+
+let kServiceType = "rw-cardshare"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   var cards: [Card] = []
   var otherCards: [Card] = []
+  
+  var session: MCSession?
+  var peerID: MCPeerID?
+  
+  private var advertiserAssistant: MCAdvertiserAssistant?
+  
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
@@ -40,8 +49,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       myCard = NSKeyedUnarchiver.unarchiveObjectWithData(myCardData) as? Card
     }
     if let otherCardsData = defaults.dataForKey("otherCards") {
-      otherCards = NSKeyedUnarchiver.unarchiveObjectWithData(otherCardsData) as [Card]
+      otherCards = NSKeyedUnarchiver.unarchiveObjectWithData(otherCardsData) as! [Card]
     }
+    
+    //1
+    let firstName = self.myCard?.firstName
+    let peerName = firstName != nil ? firstName: UIDevice.currentDevice().name
+    self.peerID = MCPeerID(displayName: peerName)
+    //2
+    self.session = MCSession(peer: self.peerID, securityIdentity: nil, encryptionPreference: .None)
+    self.session?.delegate = nil
+    //3
+    self.advertiserAssistant = MCAdvertiserAssistant(serviceType: kServiceType, discoveryInfo: nil, session: self.session)
+    //4
+    self.advertiserAssistant?.start()
     
     return true
   }
@@ -63,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func removeCardFromExchangeList(card: Card) {
     var cardsSet = NSMutableSet(array: self.cards)
     cardsSet.removeObject(card)
-    self.cards = cardsSet.allObjects as [Card]
+    self.cards = cardsSet.allObjects as! [Card]
   }
   
   // MARK: - Private methods

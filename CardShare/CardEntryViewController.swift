@@ -24,7 +24,7 @@ class CardEntryViewController: UIViewController, UIToolbarDelegate, UINavigation
     self.toolbar.delegate = self;
     
     // Get the current card values
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     if let myCard = delegate.myCard {
       self.cardImageView.image = myCard.image
       self.firstNameTextField.text = myCard.firstName
@@ -73,7 +73,7 @@ class CardEntryViewController: UIViewController, UIToolbarDelegate, UINavigation
     card.website = self.websiteTextField.text
     card.image = self.cardImageView.image
     
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     delegate.myCard = card
     
     self.presentingViewController?.dismissViewControllerAnimated(
@@ -88,7 +88,7 @@ class CardEntryViewController: UIViewController, UIToolbarDelegate, UINavigation
   // MARK: - UIImagePickerControllerDelegate methods
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
     // Based on Ray Wenderlich tutorial on how to make an Instagram app
-    let image = info[UIImagePickerControllerOriginalImage] as UIImage
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
     // Resize the image from the camera
     let scaledImage = image.resizedImageWithContentMode(
       .ScaleAspectFill,
@@ -115,32 +115,35 @@ class CardEntryViewController: UIViewController, UIToolbarDelegate, UINavigation
   * whenever the user clicks outside a text field.
   * Also handles click to add or edit a photo
   */
-  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
     //if let imageData = aDecoder.decodeObjectForKey("image") as? NSData {
-    let touch = event.allTouches()?.anyObject() as UITouch
-    if let textField = touch.view as? UITextField {
-      if self.firstNameTextField.isFirstResponder() {
-        self.firstNameTextField.resignFirstResponder()
+    if let touch = touches.first as? UITouch {
+      if let textField = touch.view as? UITextField {
+        if self.firstNameTextField.isFirstResponder() {
+          self.firstNameTextField.resignFirstResponder()
+        }
+        if self.lastNameTextField.isFirstResponder() {
+          self.lastNameTextField.resignFirstResponder()
+        }
+        if self.companyTextField.isFirstResponder() {
+          self.companyTextField.resignFirstResponder()
+        }
+        if self.phoneTextField.isFirstResponder() {
+          self.phoneTextField.resignFirstResponder()
+        }
+        if self.emailTextField.isFirstResponder() {
+          self.emailTextField.resignFirstResponder()
+        }
+        if self.websiteTextField.isFirstResponder() {
+          self.websiteTextField.resignFirstResponder()
+        }
       }
-      if self.lastNameTextField.isFirstResponder() {
-        self.lastNameTextField.resignFirstResponder()
-      }
-      if self.companyTextField.isFirstResponder() {
-        self.companyTextField.resignFirstResponder()
-      }
-      if self.phoneTextField.isFirstResponder() {
-        self.phoneTextField.resignFirstResponder()
-      }
-      if self.emailTextField.isFirstResponder() {
-        self.emailTextField.resignFirstResponder()
-      }
-      if self.websiteTextField.isFirstResponder() {
-        self.websiteTextField.resignFirstResponder()
+      if touch.view === self.cardImageView {
+        addPhotoPressed()
       }
     }
-    if touch.view === self.cardImageView {
-      addPhotoPressed()
-    }
+    super.touchesBegan(touches, withEvent: event)
+    
   }
   
   // MARK: - Helper methods

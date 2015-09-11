@@ -25,12 +25,12 @@ class Card: NSObject, NSCoding {
     if let imageData = aDecoder.decodeObjectForKey("image") as? NSData {
       image = UIImage(data: imageData)
     }
-    firstName = aDecoder.decodeObjectForKey("firstName") as String
-    lastName = aDecoder.decodeObjectForKey("lastName") as String
-    company = aDecoder.decodeObjectForKey("company") as String
-    email = aDecoder.decodeObjectForKey("email") as String
-    phone = aDecoder.decodeObjectForKey("phone") as String
-    website = aDecoder.decodeObjectForKey("website") as String
+    firstName = aDecoder.decodeObjectForKey("firstName") as! String
+    lastName = aDecoder.decodeObjectForKey("lastName") as! String
+    company = aDecoder.decodeObjectForKey("company") as! String
+    email = aDecoder.decodeObjectForKey("email") as! String
+    phone = aDecoder.decodeObjectForKey("phone") as! String
+    website = aDecoder.decodeObjectForKey("website") as! String
   }
   
   func encodeWithCoder(aCoder: NSCoder) {

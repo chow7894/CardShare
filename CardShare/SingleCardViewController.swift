@@ -23,7 +23,7 @@ class SingleCardViewController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     if self.card == nil {
-      let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+      let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
       self.fetchCardInfo(delegate.myCard)
     } else {
       self.fetchCardInfo(self.card)
@@ -36,7 +36,7 @@ class SingleCardViewController: UIViewController {
   
   @IBAction func addToCardsPressed(sender: AnyObject) {
     if let cardToAdd = self.card {
-      let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+      let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
       delegate.addToOtherCardsList(cardToAdd)
       
       // Remove the card from the exchange card list

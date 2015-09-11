@@ -22,17 +22,17 @@ class CardsViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     return delegate.otherCards.count
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let card = delegate.otherCards[indexPath.row]
-    let cell = tableView.dequeueReusableCellWithIdentifier("CardsCell", forIndexPath: indexPath) as UITableViewCell
-    cell.textLabel.text = "\(card.firstName) \(card.lastName)"
+    let cell = tableView.dequeueReusableCellWithIdentifier("CardsCell", forIndexPath: indexPath) as! UITableViewCell
+    cell.textLabel!.text = "\(card.firstName) \(card.lastName)"
     cell.detailTextLabel?.text = card.company
-    cell.imageView.image = card.image
+    cell.imageView!.image = card.image
     return cell
   }
   
@@ -41,7 +41,7 @@ class CardsViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     self.selectedCard = delegate.otherCards[indexPath.row]
     self.performSegueWithIdentifier("SegueToCardDetail2", sender: self)
   }
@@ -50,7 +50,7 @@ class CardsViewController: UITableViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if let identifier = segue.identifier {
       if identifier == "SegueToCardDetail2" {
-        let singleCardViewController = segue.destinationViewController as SingleCardViewController
+        let singleCardViewController = segue.destinationViewController as! SingleCardViewController
         singleCardViewController.card = self.selectedCard
       }
     }

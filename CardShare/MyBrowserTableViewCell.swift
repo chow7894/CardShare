@@ -23,17 +23,17 @@ class MyBrowserTableViewCell: UITableViewCell {
   
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
-    self.textLabel.textColor = delegate.mainColor()
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    self.textLabel!.textColor = delegate.mainColor()
   }
   
   override func setHighlighted(highlighted: Bool, animated: Bool) {
     super.setHighlighted(highlighted, animated: animated)
     if highlighted {
-      let delegate = UIApplication.sharedApplication().delegate as AppDelegate
-      self.textLabel.textColor = delegate.mainColor()
+      let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      self.textLabel!.textColor = delegate.mainColor()
     } else {
-      self.textLabel.textColor = UIColor.blackColor()
+      self.textLabel!.textColor = UIColor.blackColor()
     }
   }
 }

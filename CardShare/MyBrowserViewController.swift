@@ -63,7 +63,7 @@ class MyBrowserViewController: UIViewController, UIToolbarDelegate {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(
       tableViewCellIdentifier, forIndexPath: indexPath)
-      as MyBrowserTableViewCell
+      as! MyBrowserTableViewCell
     return cell
   }
   
@@ -104,6 +104,6 @@ class MyBrowserViewController: UIViewController, UIToolbarDelegate {
   private func removePeer(peerID: MCPeerID, list: [MCPeerID]) -> [MCPeerID] {
     var peersSet = NSMutableSet(array: list)
     peersSet.removeObject(peerID)
-    return peersSet.allObjects as [MCPeerID]
+    return peersSet.allObjects as! [MCPeerID]
   }
 }
