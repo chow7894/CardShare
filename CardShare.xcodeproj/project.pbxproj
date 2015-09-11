@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB4FCBD719D8949A00864008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FCBD619D8949A00864008 /* AppDelegate.swift */; };
+		CB4FCBD919D8949A00864008 /* SingleCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FCBD819D8949A00864008 /* SingleCardViewController.swift */; };
+		CB4FCBDE19D8949A00864008 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB4FCBDD19D8949A00864008 /* Images.xcassets */; };
+		CB4FCBE119D8949A00864008 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4FCBDF19D8949A00864008 /* LaunchScreen.xib */; };
+		CB4FCBED19D8949A00864008 /* CardShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FCBEC19D8949A00864008 /* CardShareTests.swift */; };
+		CBA3D84D19E1FD3100C5866C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3D84C19E1FD3100C5866C /* Card.swift */; };
+		CBFE688E19EB80DC007D0823 /* CardEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE688D19EB80DC007D0823 /* CardEntryViewController.swift */; };
+		CBFE689019EB82AE007D0823 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE688F19EB82AE007D0823 /* CardsViewController.swift */; };
+		CBFE689219EB830B007D0823 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689119EB830B007D0823 /* ShareViewController.swift */; };
+		CBFE689419EB8425007D0823 /* MyBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689319EB8425007D0823 /* MyBrowserViewController.swift */; };
+		CBFE689619EB84F3007D0823 /* MyBrowserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689519EB84F3007D0823 /* MyBrowserTableViewCell.swift */; };
+		CBFE689E19EB876F007D0823 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689919EB876F007D0823 /* UIImage+Alpha.m */; };
+		CBFE689F19EB876F007D0823 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689B19EB876F007D0823 /* UIImage+RoundedCorner.m */; };
+		CBFE68A019EB876F007D0823 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE689D19EB876F007D0823 /* UIImage+Resize.m */; };
+		CBFE68A219EB8909007D0823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFE68A119EB8909007D0823 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB4FCBE719D8949A00864008 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB4FCBC919D8949A00864008 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB4FCBD019D8949A00864008;
+			remoteInfo = CardShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB4FCBD119D8949A00864008 /* CardShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4FCBD519D8949A00864008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4FCBD619D8949A00864008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB4FCBD819D8949A00864008 /* SingleCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardViewController.swift; sourceTree = "<group>"; };
+		CB4FCBDD19D8949A00864008 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB4FCBE019D8949A00864008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB4FCBE619D8949A00864008 /* CardShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4FCBEB19D8949A00864008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4FCBEC19D8949A00864008 /* CardShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShareTests.swift; sourceTree = "<group>"; };
+		CBA3D84C19E1FD3100C5866C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CBFE688D19EB80DC007D0823 /* CardEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEntryViewController.swift; sourceTree = "<group>"; };
+		CBFE688F19EB82AE007D0823 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		CBFE689119EB830B007D0823 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CBFE689319EB8425007D0823 /* MyBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBrowserViewController.swift; sourceTree = "<group>"; };
+		CBFE689519EB84F3007D0823 /* MyBrowserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBrowserTableViewCell.swift; sourceTree = "<group>"; };
+		CBFE689719EB876F007D0823 /* CardShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardShare-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBFE689819EB876F007D0823 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		CBFE689919EB876F007D0823 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		CBFE689A19EB876F007D0823 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		CBFE689B19EB876F007D0823 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		CBFE689C19EB876F007D0823 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		CBFE689D19EB876F007D0823 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		CBFE68A119EB8909007D0823 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB4FCBCE19D8949A00864008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB4FCBE319D8949A00864008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB4FCBC819D8949A00864008 = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBD319D8949A00864008 /* CardShare */,
+				CB4FCBE919D8949A00864008 /* CardShareTests */,
+				CB4FCBD219D8949A00864008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB4FCBD219D8949A00864008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBD119D8949A00864008 /* CardShare.app */,
+				CB4FCBE619D8949A00864008 /* CardShareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB4FCBD319D8949A00864008 /* CardShare */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBD619D8949A00864008 /* AppDelegate.swift */,
+				CBFE68A119EB8909007D0823 /* Main.storyboard */,
+				CB4FCBD819D8949A00864008 /* SingleCardViewController.swift */,
+				CBFE688D19EB80DC007D0823 /* CardEntryViewController.swift */,
+				CBFE688F19EB82AE007D0823 /* CardsViewController.swift */,
+				CBFE689119EB830B007D0823 /* ShareViewController.swift */,
+				CBFE689319EB8425007D0823 /* MyBrowserViewController.swift */,
+				CBFE689519EB84F3007D0823 /* MyBrowserTableViewCell.swift */,
+				CBA3D84C19E1FD3100C5866C /* Card.swift */,
+				CBFE689819EB876F007D0823 /* UIImage+Alpha.h */,
+				CBFE689919EB876F007D0823 /* UIImage+Alpha.m */,
+				CBFE689A19EB876F007D0823 /* UIImage+RoundedCorner.h */,
+				CBFE689B19EB876F007D0823 /* UIImage+RoundedCorner.m */,
+				CBFE689C19EB876F007D0823 /* UIImage+Resize.h */,
+				CBFE689D19EB876F007D0823 /* UIImage+Resize.m */,
+				CBFE689719EB876F007D0823 /* CardShare-Bridging-Header.h */,
+				CB4FCBDD19D8949A00864008 /* Images.xcassets */,
+				CB4FCBDF19D8949A00864008 /* LaunchScreen.xib */,
+				CB4FCBD419D8949A00864008 /* Supporting Files */,
+			);
+			path = CardShare;
+			sourceTree = "<group>";
+		};
+		CB4FCBD419D8949A00864008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBD519D8949A00864008 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB4FCBE919D8949A00864008 /* CardShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBEC19D8949A00864008 /* CardShareTests.swift */,
+				CB4FCBEA19D8949A00864008 /* Supporting Files */,
+			);
+			path = CardShareTests;
+			sourceTree = "<group>";
+		};
+		CB4FCBEA19D8949A00864008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FCBEB19D8949A00864008 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB4FCBD019D8949A00864008 /* CardShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB4FCBF019D8949A00864008 /* Build configuration list for PBXNativeTarget "CardShare" */;
+			buildPhases = (
+				CB4FCBCD19D8949A00864008 /* Sources */,
+				CB4FCBCE19D8949A00864008 /* Frameworks */,
+				CB4FCBCF19D8949A00864008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardShare;
+			productName = CardShare;
+			productReference = CB4FCBD119D8949A00864008 /* CardShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB4FCBE519D8949A00864008 /* CardShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB4FCBF319D8949A00864008 /* Build configuration list for PBXNativeTarget "CardShareTests" */;
+			buildPhases = (
+				CB4FCBE219D8949A00864008 /* Sources */,
+				CB4FCBE319D8949A00864008 /* Frameworks */,
+				CB4FCBE419D8949A00864008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB4FCBE819D8949A00864008 /* PBXTargetDependency */,
+			);
+			name = CardShareTests;
+			productName = CardShareTests;
+			productReference = CB4FCBE619D8949A00864008 /* CardShareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB4FCBC919D8949A00864008 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Elidora LLC";
+				TargetAttributes = {
+					CB4FCBD019D8949A00864008 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					CB4FCBE519D8949A00864008 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CB4FCBD019D8949A00864008;
+					};
+				};
+			};
+			buildConfigurationList = CB4FCBCC19D8949A00864008 /* Build configuration list for PBXProject "CardShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB4FCBC819D8949A00864008;
+			productRefGroup = CB4FCBD219D8949A00864008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB4FCBD019D8949A00864008 /* CardShare */,
+				CB4FCBE519D8949A00864008 /* CardShareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB4FCBCF19D8949A00864008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4FCBE119D8949A00864008 /* LaunchScreen.xib in Resources */,
+				CB4FCBDE19D8949A00864008 /* Images.xcassets in Resources */,
+				CBFE68A219EB8909007D0823 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB4FCBE419D8949A00864008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB4FCBCD19D8949A00864008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFE689219EB830B007D0823 /* ShareViewController.swift in Sources */,
+				CB4FCBD919D8949A00864008 /* SingleCardViewController.swift in Sources */,
+				CBFE689E19EB876F007D0823 /* UIImage+Alpha.m in Sources */,
+				CBA3D84D19E1FD3100C5866C /* Card.swift in Sources */,
+				CBFE689419EB8425007D0823 /* MyBrowserViewController.swift in Sources */,
+				CBFE689619EB84F3007D0823 /* MyBrowserTableViewCell.swift in Sources */,
+				CBFE689F19EB876F007D0823 /* UIImage+RoundedCorner.m in Sources */,
+				CBFE689019EB82AE007D0823 /* CardsViewController.swift in Sources */,
+				CBFE68A019EB876F007D0823 /* UIImage+Resize.m in Sources */,
+				CB4FCBD719D8949A00864008 /* AppDelegate.swift in Sources */,
+				CBFE688E19EB80DC007D0823 /* CardEntryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB4FCBE219D8949A00864008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4FCBED19D8949A00864008 /* CardShareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB4FCBE819D8949A00864008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB4FCBD019D8949A00864008 /* CardShare */;
+			targetProxy = CB4FCBE719D8949A00864008 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB4FCBDF19D8949A00864008 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB4FCBE019D8949A00864008 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB4FCBEE19D8949A00864008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB4FCBEF19D8949A00864008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB4FCBF119D8949A00864008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CardShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardShare/CardShare-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB4FCBF219D8949A00864008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CardShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardShare/CardShare-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		CB4FCBF419D8949A00864008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CardShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardShare.app/CardShare";
+			};
+			name = Debug;
+		};
+		CB4FCBF519D8949A00864008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CardShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardShare.app/CardShare";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB4FCBCC19D8949A00864008 /* Build configuration list for PBXProject "CardShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB4FCBEE19D8949A00864008 /* Debug */,
+				CB4FCBEF19D8949A00864008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB4FCBF019D8949A00864008 /* Build configuration list for PBXNativeTarget "CardShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB4FCBF119D8949A00864008 /* Debug */,
+				CB4FCBF219D8949A00864008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB4FCBF319D8949A00864008 /* Build configuration list for PBXNativeTarget "CardShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB4FCBF419D8949A00864008 /* Debug */,
+				CB4FCBF519D8949A00864008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB4FCBC919D8949A00864008 /* Project object */;
+}
