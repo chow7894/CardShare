@@ -22,12 +22,21 @@ class ShareViewController: UIViewController,
   // MARK: - View lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "dataReceived:", name: DataReceivedNotification, object: nil)
   }
+  
+  
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    showHideNoDataView()
+    dataReceived(nil)
   }
+  
+  
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: DataReceivedNotification, object: nil)
+  }
+  
   
   // MARK: - Action methods
   @IBAction func addCardPressed(sender: AnyObject) {
@@ -38,16 +47,24 @@ class ShareViewController: UIViewController,
     if delegate.myCard == nil {
       showMessage("Please set up your business card first")
     } else {
-      let browserViewController = MCBrowserViewController(serviceType: kServiceType, session: delegate.session)
-      browserViewController.view.tintColor = UIColor.whiteColor()
-      browserViewController.delegate = self
-      self.presentViewController(browserViewController, animated: true, completion: nil)
+      if delegate.session?.connectedPeers.count == 0 {
+        let browserViewController = MCBrowserViewController(serviceType: kServiceType, session: delegate.session)
+        browserViewController.view.tintColor = UIColor.whiteColor()
+        browserViewController.delegate = self
+        self.presentViewController(browserViewController, animated: true, completion: nil)
+      } else  {
+        sendCard()
+      }
     }
   }
   
   func browserViewControllerDidFinish(browserViewController: MCBrowserViewController!) {
-    browserViewController.dismissViewControllerAnimated(true, completion: nil)
+    browserViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+      self.sendCard()
+      
+    })
   }
+  
   
   func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController!) {
     browserViewController.dismissViewControllerAnimated(true, completion: nil)
@@ -118,4 +135,17 @@ class ShareViewController: UIViewController,
       handler: nil))
     self.presentViewController(alert, animated: true, completion: nil)
   }
+  
+  private func sendCard() {
+    let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    delegate?.sendCardToPeer()
+    showMessage("Card sent to nearbt device")
+  }
+  
+  func dataReceived(notification: NSNotification?) {
+    showHideNoDataView()
+    self.tableView.reloadData()
+    
+  }
+  
 }
